@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int i;
+    float d, rs, cm, inch, km;
+    printf("For conversion of $ to Rupees press 1 \nFor conversion of Rupees to $ press 2 \nFor conversion of cm to inch press 3 \nFor conversion of inch to kilometer press 4 \n");
+    printf("Choose the type of conversion: ");
+    scanf("%d",&i);
+
+         switch(i)
+         {
+         case 1:
+              {
+               printf("Enter the amount in dollar: ");
+               scanf("%f",&d);
+               rs = d*74.5;
+               printf("The amount in rupees = %f",rs);
+              }break;
+         case 2:
+              {
+               printf("Enter the amount in rupees: ");
+               scanf("%f",&rs);
+               d = rs/74.5;
+               printf("The amount in dollar = %f",d);
+              }break;
+         case 3:
+              {
+               printf("Enter the distance in centimeter: ");
+               scanf("%f",&cm);
+               inch = cm/2.5;
+               printf("The distance in inches = %f",inch);
+              }break;
+         case 4:
+              {
+               printf("Enter the distance in inches: ");
+               scanf("%f",&inch);
+               km = inch/39370.1;
+               printf("The distance in kilometer = %f",km);
+              }break;
+         }
+    if(i>4)
+    {
+        printf("invalid conversion number");
+    }
+}
